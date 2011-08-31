@@ -40,10 +40,10 @@ void RealTimePage::addPanelItem(RealTimeInfoView *v, QString name, QString unit,
 }
 
 
-CurveView* RealTimePage::CreateRealTimeCruveView()
+CurveView* RealTimePage::CreateRealTimeCruveView(const QString &viewname,int viewtimerange,int maxspeed)
 {
     CurveView *view = new CurveView();
-    view->CreateCurveView();
+    view->CreateCurveView(viewname,viewtimerange,maxspeed);
     return view;
 }
 
@@ -112,7 +112,7 @@ QStackedWidget* RealTimePage::CreatePagesWidget()
     page1_panelpage = CreatView(QString("SpeedWatch"),QString("Km/h"),QPoint(0.0,0.0),150.0);
     addPanelItem(page1_panelpage,QString("Watch"),QString("rpm"),QPoint(300.0,0.0),120.0);
 
-    CurveViewPage= CreateRealTimeCruveView();
+    CurveViewPage= CreateRealTimeCruveView(tr("RealTimeSpeedCurve"),30,220);
 //    QLabel* page2_curvepage = CreateSamplePage("curve.jpg");
     QLabel* page3_faultpage = CreateSamplePage("diagnos.jpg");
 //    page2_curvepage->setAlignment(Qt::AlignCenter);

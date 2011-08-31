@@ -50,7 +50,7 @@ private:
                                        //如果是后者，本demo中该如何更新仪表盘的数据？
 
     //8.31 add curve view
-    CurveView* CreateRealTimeCruveView();
+    CurveView* CreateRealTimeCruveView(const QString &viewname,int viewtimerange,int maxspeed);
     CurveView* CurveViewPage;
 
 };
