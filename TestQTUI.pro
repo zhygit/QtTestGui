@@ -21,7 +21,8 @@ SOURCES += main.cpp\
     realtimepage.cpp \
     flowlayout.cpp \
     buttonwidget.cpp \
-    curveitem.cpp
+    curveitem.cpp \
+    curveview.cpp
 
 HEADERS  += mainwindow.h \
     alarmpage.h \
@@ -33,7 +34,8 @@ HEADERS  += mainwindow.h \
     realtimepage.h \
     flowlayout.h \
     buttonwidget.h \
-    curveitem.h
+    curveitem.h \
+    curveview.h
 
 TRANSLATIONS = arrowpad_cn.ts
 

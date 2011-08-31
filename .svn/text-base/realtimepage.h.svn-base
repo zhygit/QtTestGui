@@ -2,7 +2,7 @@
 #define REALTIMEPAGE_H
 #include "realtimeinfoview.h"
 #include "buttonwidget.h"
-
+#include "curveview.h"
 
 #include <QMap>
 #include <QWidget>
@@ -48,6 +48,10 @@ private:
 
     RealTimeInfoView * page1_panelpage;//这个不确定是否要声明在这里，还是在CreatePagesWidget()的时候再声明？
                                        //如果是后者，本demo中该如何更新仪表盘的数据？
+
+    //8.31 add curve view
+    CurveView* CreateRealTimeCruveView();
+    CurveView* CurveViewPage;
 
 };
 

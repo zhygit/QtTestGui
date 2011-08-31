@@ -123,10 +123,6 @@ void CurveItem::drawCurve(QPainter *painter)
         painter->drawPath(path);
         p_pre=newp;
     }
-
-
-
-
 }
 
 
@@ -146,19 +142,17 @@ void CurveItem::CordTest(QPainter *painter)
     painter->setPen(pen);
     painter->drawLine(0,0,100,-100);
 }
-void CurveItem::updateAll()
+//void CurveItem::updateAll()
+//{
+////    currentTime=QTime::currentTime();
+////    getTime();
+//    updateSpeed();
+//    update();
+//}
+
+
+void CurveItem::updateSpeed_item(qreal v)
 {
-//    currentTime=QTime::currentTime();
-//    getTime();
-    updateSpeed();
+    speed=v;
     update();
-}
-
-
-void CurveItem::updateSpeed()
-{
-    if(speed<160)
-        speed=speed+10+((-50 + qrand() % 100) / 10.0);
-    else  speed += (-50 + qrand() % 100) / 10.0;
-
 }

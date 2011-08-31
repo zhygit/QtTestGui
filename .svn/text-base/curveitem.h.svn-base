@@ -16,7 +16,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     void drawCordinate(QPainter *painter);
     void drawCurve(QPainter *painter);
-    void updateSpeed();
+    void updateSpeed_item(qreal v);
     void getTime();
     void timeDisplay(QPainter *painter);
     void setViewTimeRange(int range); //range以分钟为单位，函数处理以秒为单位
@@ -27,7 +27,7 @@ public:
 signals:
 
 public slots:
-    void updateAll();
+//    void updateAll();
 
 
 
