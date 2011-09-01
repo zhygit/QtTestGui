@@ -118,7 +118,7 @@ void CurveItem::drawCordinate(QPainter *painter)
 
     text=Title;
     textrect=fm.boundingRect(text);
-    textrect.moveCenter(CordBoundingRect.center()+QPointF(0,CordBoundingRect.top()-50));
+    textrect.moveCenter(CordBoundingRect.center()+QPointF(0,CordBoundingRect.top()-30));
     painter->drawText(textrect,text);
 }
 

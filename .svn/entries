@@ -28,14 +28,14 @@ file:///E:/repostiory/trunk/TestGuiPrj
 
 realtimepage.cpp
 file
-4
+5
 
 
 
-2011-08-31T07:35:07.404619Z
-8bc221669e3d9b7bf37d7c201f12dba8
-2011-08-31T07:38:01.185813Z
-4
+2011-09-01T02:19:04.520159Z
+8afab3e651a0fd81fe6ee08c6ea53c56
+2011-09-01T02:25:15.560086Z
+5
 Administrator
 
 
@@ -58,7 +58,7 @@ Administrator
 
 
 
-3946
+4385
 
 TestQTUI.pro
 file
@@ -331,6 +331,40 @@ Administrator
 
 
 669
+
+curveview.cpp
+file
+5
+
+
+
+2011-08-31T07:32:18.420729Z
+58d5a11f929eb0f84a9b3e7723d5d6ff
+2011-09-01T02:25:15.560086Z
+5
+Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+911
 
 carmanagepage.h
 file
@@ -610,6 +644,40 @@ Administrator
 
 4190
 
+curveitem.cpp
+file
+5
+
+
+
+2011-09-01T02:20:22.805918Z
+b3a5e10bac340cb9c56bf27a26af8df9
+2011-09-01T02:25:15.560086Z
+5
+Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5549
+
 arrowpad_cn.ts
 file
 1
@@ -644,50 +712,16 @@ Administrator
 
 8931
 
-curveitem.cpp
-file
-4
-
-
-
-2011-08-31T07:35:26.218804Z
-81e1d30b422779dbd70e5d90c77608f5
-2011-08-31T07:38:01.185813Z
-4
-Administrator
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5549
-
 realtimepage.h
 file
-4
+5
 
 
 
-2011-08-31T07:35:09.045391Z
-cde400cb9878d30799183b9de29a0bea
-2011-08-31T07:38:01.185813Z
-4
+2011-09-01T02:19:07.817224Z
+c43048233975f0b2f680db89db053a04
+2011-09-01T02:25:15.560086Z
+5
 Administrator
 
 
@@ -710,41 +744,7 @@ Administrator
 
 
 
-1736
-
-alarmmanage.cpp
-file
-1
-
-
-
-2011-07-27T09:51:30.000000Z
-281b9e9df7272e8155a225f13d42dbd4
-2011-08-24T07:17:11.610580Z
-1
-Administrator
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-102
+1880
 
 flowlayout.cpp
 file
@@ -780,6 +780,40 @@ Administrator
 
 5995
 
+alarmmanage.cpp
+file
+1
+
+
+
+2011-07-27T09:51:30.000000Z
+281b9e9df7272e8155a225f13d42dbd4
+2011-08-24T07:17:11.610580Z
+1
+Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+102
+
 realtimeinfoview.cpp
 file
 1
@@ -813,40 +847,6 @@ Administrator
 
 
 1572
-
-dashboarditem.h
-file
-1
-
-
-
-2011-08-18T07:36:19.176974Z
-c1cc4cf5956ef09a406c7449d4e7f839
-2011-08-24T07:17:11.610580Z
-1
-Administrator
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1255
 
 carmanagepage.cpp
 file
@@ -882,16 +882,16 @@ Administrator
 
 2787
 
-mainwindow.cpp
+dashboarditem.h
 file
-2
+1
 
 
 
-2011-08-31T01:00:27.574477Z
-0b14f0898f8bff336b9c927e5bb04b5e
-2011-08-31T01:59:10.771046Z
-2
+2011-08-18T07:36:19.176974Z
+c1cc4cf5956ef09a406c7449d4e7f839
+2011-08-24T07:17:11.610580Z
+1
 Administrator
 
 
@@ -914,7 +914,7 @@ Administrator
 
 
 
-5545
+1255
 
 README
 file
@@ -950,16 +950,16 @@ Administrator
 
 0
 
-TestQTUI.pro.user
+mainwindow.cpp
 file
-1
+2
 
 
 
-2011-08-31T07:34:41.355410Z
-fa50b797b94da46f0336bcd3608df599
-2011-08-24T07:17:11.610580Z
-1
+2011-08-31T01:00:27.574477Z
+0b14f0898f8bff336b9c927e5bb04b5e
+2011-08-31T01:59:10.771046Z
+2
 Administrator
 
 
@@ -982,7 +982,41 @@ Administrator
 
 
 
-13493
+5545
+
+TestQTUI.pro.user
+file
+5
+
+
+
+2011-09-01T02:23:15.605426Z
+9faf80097abe41c7637f151bc169acb2
+2011-09-01T02:25:15.560086Z
+5
+Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7977
 
 buttonwidget.cpp
 file
@@ -1017,6 +1051,40 @@ Administrator
 
 
 1813
+
+curveview.h
+file
+5
+
+
+
+2011-08-31T07:35:09.045391Z
+0edf4ec734d464585e3bdeb1ee7fb041
+2011-09-01T02:25:15.560086Z
+5
+Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+520
 
 arthurstyle.cpp
 file

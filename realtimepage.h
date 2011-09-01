@@ -22,6 +22,8 @@ public:
      void addPanelItem(RealTimeInfoView* v,QString name, QString unit,QPointF p,qreal r);
      void addSummaryWidgetButton(ButtonWidget* buttonwidget,const QString &name);
      void ConncetButtonAndPage(ButtonWidget* buttonwidget,QStackedWidget* pagesstack);
+
+     void addCurveItem(CurveView *v,const QString &viewname,int viewtimerange,int maxspeed);
 signals:
 
 public slots:
@@ -52,6 +54,8 @@ private:
     //8.31 add curve view
     CurveView* CreateRealTimeCruveView(const QString &viewname,int viewtimerange,int maxspeed);
     CurveView* CurveViewPage;
+    CurveView* Curve1;
+    CurveView* Curve2;
 
 };
 

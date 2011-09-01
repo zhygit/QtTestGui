@@ -15,7 +15,7 @@ RealTimePage::RealTimePage(QWidget *parent) :
     virtualspeed=0;
     timer = new QTimer(this);
     connect (timer,SIGNAL(timeout()),this,SLOT(valueChanged()));
-    timer->start(1000);
+    timer->start(100);
 //    connect (timer,);//
 
     QVBoxLayout* layout = new QVBoxLayout();
@@ -47,6 +47,11 @@ CurveView* RealTimePage::CreateRealTimeCruveView(const QString &viewname,int vie
     return view;
 }
 
+void RealTimePage::addCurveItem(CurveView *v, const QString &viewname, int viewtimerange, int maxspeed)
+{
+    v->CreateCurveView(viewname,viewtimerange,maxspeed);
+}
+
 void RealTimePage::valueChanged()
 {
     if(virtualspeed<160)
@@ -60,18 +65,12 @@ void RealTimePage::valueChanged()
         virtualspeed += (-50 + qrand() % 100) / 10.0;
     }
 
-//    if(virtualspeed>200)
-//    {
-//        virtualspeed=0;
-//    }
-//    else
-//    {
-//        virtualspeed++;
-//    }
+
     page1_panelpage->UpdateInfo(QString("SpeedWatch"),sendValue());
     page1_panelpage->UpdateInfo(QString("Watch"),sendValue());
 //    CurveViewPage->updateSpeed(sendValue);
-    CurveViewPage->updateSpeed(sendValue());
+    Curve1->updateSpeed(sendValue());
+    Curve2->updateSpeed(sendValue());
 }
 qreal RealTimePage::sendValue()
 {
@@ -112,13 +111,22 @@ QStackedWidget* RealTimePage::CreatePagesWidget()
     page1_panelpage = CreatView(QString("SpeedWatch"),QString("Km/h"),QPoint(0.0,0.0),150.0);
     addPanelItem(page1_panelpage,QString("Watch"),QString("rpm"),QPoint(300.0,0.0),120.0);
 
-    CurveViewPage= CreateRealTimeCruveView(tr("RealTimeSpeedCurve"),30,220);
-//    QLabel* page2_curvepage = CreateSamplePage("curve.jpg");
+    Curve1= CreateRealTimeCruveView(tr("RealTimeSpeedCurve"),30,220);
+    Curve2=CreateRealTimeCruveView(tr("SpeedCurve2"),30,200);
+    QVBoxLayout* layoutCurvePage = new QVBoxLayout();
+    layoutCurvePage->addWidget(Curve1);
+    layoutCurvePage->addWidget(Curve2);
+    QWidget* CurvePageTest = new QWidget;
+    CurvePageTest->setLayout(layoutCurvePage);
+
+//    CurveViewPage= CreateRealTimeCruveView(tr("RealTimeSpeedCurve"),30,220);
+//    addCurveItem(CurveViewPage,tr("SpeedCurve2"),30,200);
+
     QLabel* page3_faultpage = CreateSamplePage("diagnos.jpg");
 //    page2_curvepage->setAlignment(Qt::AlignCenter);
     page3_faultpage->setAlignment(Qt::AlignCenter);
     viewpages->addWidget(page1_panelpage);
-    viewpages->addWidget(CurveViewPage);
+    viewpages->addWidget(CurvePageTest);
     viewpages->addWidget(page3_faultpage);
 
     return viewpages;
